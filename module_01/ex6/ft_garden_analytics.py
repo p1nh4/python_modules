@@ -116,7 +116,7 @@ class Seed(Flower):
         super().__init__(name, height, age, color)
         self._num_seed = 0
 
-    def bloom(self):
+    def bloom(self) -> None:
         super().bloom()
         self._num_seed += 42
 
