@@ -1,62 +1,66 @@
 #!/usr/bin/env python3
 
-def garden_operations(operation_number: str) -> None:
-    temp_int: int = int(operation_number)
+
+"""
+raise serve para modificar a saida, quando envolve regras de negocio
+(erros que o ptyhon3 nao conhece), em outros casos python3 devolve
+erro de fabrica
+"""
+
+
+def garden_operations(operation_number: int) -> None:
 
     if operation_number == 0:
         int("abc")
-    elif operation_number == 1
-        result = 1 / 0
-    elif
-    raise ValueError("")
+    elif operation_number == 1:
+        1 / 0
+    elif operation_number == 2:
+        open("/non/existent/file")
+    elif operation_number == 3:
+        "string" + 5
+    else:
+        4
 
-    raise ZeroDivisionError
-
-    raise FileNotFoundError ()
-
-    raise TypeError
-
-    return
 
 def test_error_types() -> None:
     print("=== Garden Error Types Demo ===")
 
-    print("Testing Operation 0...") 
+    print("Testing operation 0...")
     try:
-        garden_operations('0')
-        print(f"Operation completed successfully!")
+        garden_operations(0)
+        print("Operation completed successfully!")
     except (ValueError, ZeroDivisionError, FileNotFoundError, TypeError) as e:
-        print(f"Caught input_temperature error: {e}")
-    
-    print("Testing Operation 1...") 
-    try:
-        garden_operations('1')
-        print(f"Operation completed successfully!")
-    except (ValueError, ZeroDivisionError, FileNotFoundError, TypeError) as e:
-        print(f"Caught input_temperature error: {e}")
-    
-    print("Testing Operation 2...") 
-    try:
-        garden_operations('2')
-        print(f"Operation completed successfully!")
-    except (ValueError, ZeroDivisionError, FileNotFoundError, TypeError) as e:
-        print(f"Caught input_temperature error: {e}")
-    
-    print("Testing Operation 3...") 
-    try:
-        garden_operations('3')
-        print(f"Operation completed successfully!")
-    except (ValueError, ZeroDivisionError, FileNotFoundError, TypeError) as e:
-        print(f"Caught input_temperature error: {e}")
-   
-   print("Testing Operation 4...") 
-    try:
-        garden_operations('4')
-        print(f"Operation completed successfully!")
-    except (ValueError, ZeroDivisionError, FileNotFoundError, TypeError) as e:
-        print(f"Caught input_temperature error: {e}")
+        print(f"Caught {e.__class__.__name__}: {e}")
 
-    print("All error types testes sucessfully!")
+    print("Testing operation 1...")
+    try:
+        garden_operations(1)
+        print("Operation completed successfully!")
+    except (ValueError, ZeroDivisionError, FileNotFoundError, TypeError) as e:
+        print(f"Caught {e.__class__.__name__}: {e}")
+    print("Testing operation 2...")
+    try:
+        garden_operations(2)
+        print("Operation completed successfully!")
+    except (ValueError, ZeroDivisionError, FileNotFoundError, TypeError) as e:
+        print(f"Caught {e.__class__.__name__}: {e}")
+
+    print("Testing operation 3...")
+    try:
+        garden_operations(3)
+        print("Operation completed successfully!")
+    except (ValueError, ZeroDivisionError, FileNotFoundError, TypeError) as e:
+        print(f"Caught {e.__class__.__name__}: {e}")
+
+    print("Testing operation 4...")
+    try:
+        garden_operations(4)
+        print("Operation completed successfully!")
+    except (ValueError, ZeroDivisionError, FileNotFoundError, TypeError) as e:
+        print(f"Caught {e.__class__.__name__}: {e}")
+
+    print("\nAll error types tested successfully!")
+
 
 def main() -> None:
     test_error_types()
@@ -64,5 +68,3 @@ def main() -> None:
 
 if __name__ == "__main__":
     main()
-     
-
