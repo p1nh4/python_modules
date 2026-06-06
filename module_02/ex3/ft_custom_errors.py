@@ -50,11 +50,11 @@ def test_custom_errors() -> None:
     try:
         ft_check_plant("wilting")
     except GardenError as e:
-        print(f"Caught {e.__class__.__name__}: {e}")
+        print(f"Caught GardenError: {e}")
     try:
         ft_check_water("tank")
     except GardenError as e:
-        print(f"Caught {e.__class__.__name__}: {e}")
+        print(f"Caught GardenError: {e}")
 
     print("\nAll custom error types work correctly!")
 
