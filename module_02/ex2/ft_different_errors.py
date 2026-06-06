@@ -28,34 +28,34 @@ def test_error_types() -> None:
     print("Testing operation 0...")
     try:
         garden_operations(0)
-        print("Operation completed successfully!")
+        print("Operation completed successfully")
     except (ValueError, ZeroDivisionError, FileNotFoundError, TypeError) as e:
         print(f"Caught {e.__class__.__name__}: {e}")
 
     print("Testing operation 1...")
     try:
         garden_operations(1)
-        print("Operation completed successfully!")
+        print("Operation completed successfully")
     except (ValueError, ZeroDivisionError, FileNotFoundError, TypeError) as e:
         print(f"Caught {e.__class__.__name__}: {e}")
     print("Testing operation 2...")
     try:
         garden_operations(2)
-        print("Operation completed successfully!")
+        print("Operation completed successfully")
     except (ValueError, ZeroDivisionError, FileNotFoundError, TypeError) as e:
         print(f"Caught {e.__class__.__name__}: {e}")
 
     print("Testing operation 3...")
     try:
         garden_operations(3)
-        print("Operation completed successfully!")
+        print("Operation completed successfully")
     except (ValueError, ZeroDivisionError, FileNotFoundError, TypeError) as e:
         print(f"Caught {e.__class__.__name__}: {e}")
 
     print("Testing operation 4...")
     try:
         garden_operations(4)
-        print("Operation completed successfully!")
+        print("Operation completed successfully")
     except (ValueError, ZeroDivisionError, FileNotFoundError, TypeError) as e:
         print(f"Caught {e.__class__.__name__}: {e}")
 
